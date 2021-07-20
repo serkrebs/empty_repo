@@ -40,4 +40,4 @@ jobs:
         with:
           target-size: tiny
 
-      - run: 'echo Redis Cache configuration:' ${{ github.steps.choose-redis-size.output.redis-sku }} ${{ github.steps.choose-redis-size.output.redis-family }} ${{ github.steps.choose-redis-size.output.redis-capacity }}
+      - run: echo 'Redis Cache configuration:' ${{ github.steps.choose-redis-size.output.redis-sku }} ${{ github.steps.choose-redis-size.output.redis-family }} ${{ github.steps.choose-redis-size.output.redis-capacity }}
