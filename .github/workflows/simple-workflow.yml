@@ -42,4 +42,4 @@ jobs:
       - id: choose-redis-size
         run: bash ./scripts/set-redis-size.sh ${{ github.event.inputs.cache-size }}
 
-      - run: echo 'Redis Cache configuration:' ${{ github.steps.choose-redis-size.outputs.redis-sku }} ${{ github.steps.choose-redis-size.outputs.redis-family }} ${{ github.steps.choose-redis-size.outputs.redis-capacity }}
+      - run: echo 'Redis Cache configuration:' ${{ steps.choose-redis-size.outputs.redis-sku }} ${{ steps.choose-redis-size.outputs.redis-family }} ${{ steps.choose-redis-size.outputs.redis-capacity }}
