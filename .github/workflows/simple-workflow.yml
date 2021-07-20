@@ -37,7 +37,7 @@ jobs:
 
       - id: choose-redis-size
         uses: actions/redis-size-action@v1
-          with:
-            target-size: tiny
+        with:
+          target-size: tiny
 
       - run: 'echo Redis Cache configuration:' ${{ github.steps.choose-redis-size.output.redis-sku }} ${{ github.steps.choose-redis-size.output.redis-family }} ${{ github.steps.choose-redis-size.output.redis-capacity }}
