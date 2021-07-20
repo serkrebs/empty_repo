@@ -40,7 +40,6 @@ jobs:
           echo test, and deploy your project.
 
       - id: choose-redis-size
-        run: . ./scripts/set-redis-size.sh ${{ github.event.inputs.cache-size }}
-        shell: bash
+        run: bash ./scripts/set-redis-size.sh ${{ github.event.inputs.cache-size }}
 
       - run: echo 'Redis Cache configuration:' ${{ github.steps.choose-redis-size.output.redis-sku }} ${{ github.steps.choose-redis-size.output.redis-family }} ${{ github.steps.choose-redis-size.output.redis-capacity }}
