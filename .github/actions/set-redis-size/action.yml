@@ -1,5 +1,5 @@
-name: 'Redis Size'
-description: 'Greet someone'
+name: 'Set Redis Size'
+description: 'set output arguments for appropriate Redis Cache size and configuration'
 inputs:
   target-size:  # id of input
     description: 'Desired cache size (one of tiny, small, medium)'

@@ -36,7 +36,7 @@ jobs:
           echo test, and deploy your project.
 
       - id: choose-redis-size
-        uses: .github/actions/redis-size-action@v1.0.0
+        uses: serkrebs/empty_repo/.github/actions/set-redis-size@v1.1.0
         with:
           target-size: tiny
 
