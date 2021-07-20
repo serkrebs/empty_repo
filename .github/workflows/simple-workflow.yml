@@ -36,7 +36,7 @@ jobs:
           echo test, and deploy your project.
 
       - id: choose-redis-size
-        uses: actions/redis-size-action@v1
+        uses: actions/redis-size-action@v1.0.0
         with:
           target-size: tiny
 
