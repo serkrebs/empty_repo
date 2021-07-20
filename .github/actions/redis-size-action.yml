@@ -1,0 +1,30 @@
+name: 'Redis Size'
+description: 'Greet someone'
+inputs:
+  target-size:  # id of input
+    description: 'Desired cache size (one of tiny, small, medium)'
+    required: true
+    default: 'World'
+outputs:
+  random-number:
+    description: "Random number"
+    value: ${{ steps.random-number-generator.outputs.random-id }}
+  redis-sku: 
+    description: "Sku for cache"
+    value: "Basic"
+  redis-family:
+    description: "Family for cache"
+    value: "C"
+  redis-capacity:
+    description: "Capacity for cache"
+    value: 0
+runs:
+  using: "composite"
+  steps:
+    - run: echo Hello ${{ inputs.target-size }}.
+      shell: bash
+    - id: random-number-generator
+      run: echo "::set-output name=random-id::$(echo $RANDOM)"
+      shell: bash
+    - run: ${{ github.action_path }}/goodbye.sh
+      shell: bash
